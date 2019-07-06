@@ -1,0 +1,27 @@
+<body>
+    <header>
+        <h1> Ciclismo Ruta </h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Imagenes</a></li>
+            <li><a href="#">Contactanos</a></li>
+        </ul>
+
+        <div class="hide">
+            <i class="fa fa-bars" aria-hidden="true"></i> Menu
+        </div>
+    </nav>
+    
+    <script type="text/javascript">
+      $('.hide').on('click',function(){
+        $('nav ul').toggleClass('show');
+      });
+    </script>
+
+  </body>
