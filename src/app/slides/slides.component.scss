@@ -1,6 +1,11 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
 
+body
+{
+    @include body;
+}
+
 .content {
 	position: relative;
 	top: 50%;
@@ -13,6 +18,7 @@
 #section-1{
     @include bg_covertint ($r_deep_blue,$g_deep_blue,$b_deep_blue,$r_light_blue,$g_light_blue,$b_light_blue,$alpha_cover,$picture-slide);
     height: 100vh;
+    top: 50;
     color: $white;
     h1{
         margin-bottom: 30px;

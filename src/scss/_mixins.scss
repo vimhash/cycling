@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 	font-family: $fuente;
-	background: $deep_blue;
 }
 
 @mixin center-vertical {
@@ -35,4 +34,26 @@
 	margin-bottom: 10px;
 	height: 50%;
 	@include center-horizontal;
+}
+
+@mixin placeholder ($color,$font-weight){
+	::-webkit-input-placeholder {
+		color: $color;
+		font-weight: $font-weight;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		font-weight: $font-weight;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: $color;
+		font-weight: $font-weight;
+	}
+
+	:-ms-input-placeholder {  
+		color: $color; 
+		font-weight: $font-weight;
+	}
 }

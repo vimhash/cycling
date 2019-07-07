@@ -11,9 +11,10 @@ body
     height: 80px;
     overflow: hidden;
     display: flex;
-    // top: 0;
+    top: 0;
+    left: 0;
     align-items: center;
-    // background: $light_blue;
+    background: $light_blue;
     width: 100%;
   }
   .logo{
