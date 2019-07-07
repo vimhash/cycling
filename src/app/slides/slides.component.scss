@@ -1,0 +1,26 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+    h1{
+        @include headers;
+    }
+}
+
+#section-1{
+    @include bg_covertint ($r_deep_blue,$g_deep_blue,$b_deep_blue,$r_light_blue,$g_light_blue,$b_light_blue,$alpha_cover,$picture-slide);
+    height: 100vh;
+    color: $white;
+    h1{
+        margin-bottom: 30px;
+    }
+}
+
+.video iframe{
+    @include center-horizontal;
+    width: 100%;
+    height: 100vh;
+}

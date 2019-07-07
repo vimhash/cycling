@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+body
+{
+    @include body;
+}
+  
+  .navbar{
+    position: fixed;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    // top: 0;
+    align-items: center;
+    // background: $light_blue;
+    width: 100%;
+  }
+  .logo{
+    background: url(../../assets/logo.jpg) no-repeat 50% 50%;
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin-left:20px;
+  }
+  .menu{
+    position: absolute;
+    right: 20px;
+  }
+  .menu a{
+    color: $red;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+  }
+  .menu a:hover{
+    color: $blue;
+  }
