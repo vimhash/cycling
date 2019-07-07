@@ -1,0 +1,31 @@
+body{
+    @include body;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    background: $primary_color;
+    padding: 40px 0;
+    color: $color_titles;
+}
+  
+nav ul{
+    @include body;
+    background-color: $secundary_color;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: $color_titles;
+}
+
+nav ul li:hover{
+    background: $primary_color;
+}
