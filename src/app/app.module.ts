@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SlidesComponent } from './slides/slides.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [FormBuilder],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
