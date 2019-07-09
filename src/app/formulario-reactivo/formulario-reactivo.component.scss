@@ -36,7 +36,27 @@ body
 				text-align: center;
 				margin-top: 15px;
 				margin-bottom: 30px;
-				color: $light-blue;
+				color: $red;
+				transition: all 0.3s ease 0s;
+				padding-bottom: 20px;
+
+				&:focus{
+					border-bottom: solid 2px $red;
+				}
+			}
+			input[type=password]{
+				border-style: none;
+				background: none;
+				outline: none;
+				border-bottom: solid 2px darken($blue,20%);
+				font-size: 50px;
+				font-family: 'Lato', sans-serif;
+				width: 60%;
+				margin-left: 20%;
+				text-align: center;
+				margin-top: 15px;
+				margin-bottom: 30px;
+				color: $red;
 				transition: all 0.3s ease 0s;
 				padding-bottom: 20px;
 

@@ -29,6 +29,8 @@ export class FormularioReactivoComponent implements OnInit {
     })
   }
 
+  get prueba() { return this.loginForm.get('usuario'); }  //prueba
+
   validaLoginForm(){
     if(this.loginForm.valid){
       this.usuario = this.loginForm.controls['usuario'].value
@@ -38,6 +40,8 @@ export class FormularioReactivoComponent implements OnInit {
       this.usuario = ''
       this.password = ''
       this.mensajeUsuario = JSON.stringify(this.loginForm.errors)
+      // alert( JSON.stringify(this.loginForm.controls['usuario'].errors))
+      // alert( JSON.stringify(this.loginForm.controls['password'].errors))
       if(this.loginForm.controls['usuario'].errors){
         this.mensajeUsuario = `Usuario Requerido`
       }else{
@@ -45,13 +49,11 @@ export class FormularioReactivoComponent implements OnInit {
       }
       
       this.mensajePassword = JSON.stringify(this.loginForm.errors)
-      // alert( JSON.stringify(this.loginForm.controls['usuario'].errors))
-      // alert( JSON.stringify(this.loginForm.controls['password'].errors))
-      if(this.loginForm.controls['password'].errors){
-        this.mensajePassword = `Contraseña Incorrecta - Minimo de 6 digitos`
-      }else{
-        this.mensajePassword = ''
-      }
+    }
+    if(this.loginForm.controls['password'].errors){
+      this.mensajePassword = `Contraseña Incorrecta - Minimo de 6 digitos`
+    }else{
+      this.mensajePassword = ''
     }
   }
   /* clase explicacion*/

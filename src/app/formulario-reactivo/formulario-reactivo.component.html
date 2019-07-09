@@ -18,19 +18,33 @@
 
     <hr><br><br><br><br><br>
 
-    <form [formGroup]="loginForm">
-        <label>Usuario:</label>
-        <input formControlName="usuario">
-        <span *ngIf="mensajeUsuario != ''"></span>
-        <br><br><br>
-        <label>Contraseña:</label>
-        <input formControlName="password" type="password">
-    </form>
+    <div id="section-2">
+        <div class="content">
+            <form [formGroup]="loginForm">
+                <div class="form-element">
+                    <input formControlName="usuario" placeholder="Usuario" type="text">
+                </div>
+                <span *ngIf="mensajeUsuario != ''"></span>
+                {{mensajeUsuario}}
+                
+                <div *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touched)" class="alert alert-danger"></div>
 
-    <button (click)="validaLoginForm()">Enviar Errores</button>
-    <button (click)="validaLoginForm()" [disabled]="!loginForm.valid">Enviar</button>
-    {{usuario}}
-    {{password}}
-    {{mensajeUsuario}}
-    {{mensajePassword}}
+                <div class="form-element">
+                    <input formControlName="password" type="password" placeholder="Contraseña">
+                </div>
+                {{mensajePassword}}
+
+                <div class="form-element">
+                    <button (click)="validaLoginForm()">Enviar Errores</button>
+                    <button (click)="validaLoginForm()" [disabled]="!loginForm.valid">Enviar</button>
+                </div>
+            </form>
+            <!-- {{usuario}}
+            {{password}} -->
+        </div>
+    </div>
+
+    <script>alert(`Form Status: {{ loginForm.status }}`)</script>
+    
+    
 </body>
